@@ -21,9 +21,15 @@ router.post('/', authToken, (req, res, next) => {
 		.catch(next);
 });
 
-router.get('/my-orders/:id', (req, res, next) => {
-    const userId = req.params.id
-	Order.find({"owner.ownerId": `${userId}`})
+router.get('/my-orders/:userId', (req, res, next) => {
+	const userId = req.params.userId;
+	Order.find({ 'owner.ownerId': `${userId}` })
+		.then((order) => res.json(order))
+		.catch(next);
+});
+
+router.delete('/my-orders/:orderId', (req, res, next) => {
+	Order.deleteOne({ _id: `${req.params.orderId}` })
 		.then((order) => res.json(order))
 		.catch(next);
 });
