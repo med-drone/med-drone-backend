@@ -1,0 +1,33 @@
+###
+POST http://localhost:4000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzNjJhZmJkN2ZlZGI0OTA4NWIxNWIiLCJmaXJzdE5hbWUiOiJEYXZpZCIsImxhc3ROYW1lIjoiQmFyciIsInBhc3N3b3JkIjoiJDJiJDEwJHFEMU85UmN0aC5tY0lEL0RkTHB5ZHVaWmEzbnQyQzRZYkZ1VUtsYUlVcDNTS281U0ZmUkZTIiwiZW1haWwiOiJEYXZpZEBtZS5jb20iLCJjcmVhdGVkQXQiOiIyMDIxLTAyLTEwVDA0OjM1OjU5LjYyOFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTAyLTEwVDA0OjM1OjU5LjYyOFoiLCJfX3YiOjAsImlhdCI6MTYxMjkzNTc2NX0.NULmtPBdxNX2u-fFjN8h4s5m4xYDrsd-2CCgINnNn2Q
+Content-Type: application/json
+
+{
+"productName": "Covid Vacine"
+}
+
+# productName: {
+# 		type: String,
+# 		required: true,
+# 	},
+# 	status: {
+# 		type: String,
+# 		required: true, 
+# 		default: 'Order Submitted',
+# 	},
+# 	deliveryEta: {
+# 		type: Number,
+# 		required: true,
+# 		default: Date.now + 259200000, // current date in millseconds + 3 days in milliseconds
+# 	},
+#     owner: {
+#         ownerId: {
+#             type: String,
+#             required: true,
+#         },
+#         email: {
+#             type: String,
+#             required: true
+#         }
+#     }

@@ -6,16 +6,25 @@ const OrderSchema = new mongoose.Schema({
 	},
 	status: {
 		type: String,
-		required: true,git 
+		required: true, 
 		default: 'Order Submitted',
 	},
 	deliveryEta: {
 		type: Number,
 		required: true,
-		default: Date.now + 259200000, // current date in millseconds + 3 days in milliseconds
+		default: Date.now() + 259200000, // current date in millseconds + 3 days in milliseconds
 	},
-    orderOwner: {
-        type: String,
-        required: true,
+    owner: {
+        ownerId: {
+            type: String,
+            required: true,
+        },
+        email: {
+            type: String,
+            required: true
+        }
     }
 });
+
+const Order = mongoose.model('Order', OrderSchema);
+module.exports = Order;
