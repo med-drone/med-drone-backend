@@ -16,11 +16,4 @@ app.listen(port, () => {
 	console.log(`Running on ${port}`);
 });
 
-// app.get('/', (req, res) => {
-//     // res.send("hello")
-// 	User.find({})
-// 		.then((response) => {
-// 			res.send(response);
-// 		})
-// 		.catch(console.error);
-// });
+
