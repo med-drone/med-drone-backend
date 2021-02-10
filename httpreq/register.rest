@@ -3,8 +3,33 @@ POST http://localhost:4000/users/register
 Content-Type: application/json
 
 {
-    "firstName": "Guy",
-    "lastName": "Barr",
-    "password": "cat",
-    "email": "Guy@me.com"
+    "firstName": "Tarun",
+    "lastName": "Girish",
+    "password": "tarun1234",
+    "email": "Tarun@me.com"
+}
+
+###
+POST http://localhost:4000/users/register
+Content-Type: application/json
+
+{
+    "firstName": "Vincent",
+    "lastName": "Alojado",
+    "password": "potato",
+    "email": "Vincent@me.com",
+    "doctorsNumber": "(889) 415-3321",
+    "location": "Oakland, California",
+    "password": "12341234"
+}
+
+
+###
+POST http://localhost:4000/users/register
+Content-Type: application/json
+
+{
+    "firstName": "Mahi",
+    "password": "12341234",
+    "email": "Mahi@me.com"
 }

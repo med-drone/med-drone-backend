@@ -25,7 +25,8 @@ router.post('/register', async (req, res, next) => {
 
 		User.create({ ...req.body, password: hashedPassword }).then((user) => {
 			res.status(201).json(user);
-		});
+		})
+		.catch(res.status(400).send("Incomplete registration"));
 	} catch {
 		res.status(500);
 	}
