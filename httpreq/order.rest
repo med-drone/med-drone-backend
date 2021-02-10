@@ -4,30 +4,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDIzNjJhZ
 Content-Type: application/json
 
 {
-"productName": "Covid Vacine"
+"productName": "Advil",
+"quantity": 10
 }
-
-# productName: {
-# 		type: String,
-# 		required: true,
-# 	},
-# 	status: {
-# 		type: String,
-# 		required: true, 
-# 		default: 'Order Submitted',
-# 	},
-# 	deliveryEta: {
-# 		type: Number,
-# 		required: true,
-# 		default: Date.now + 259200000, // current date in millseconds + 3 days in milliseconds
-# 	},
-#     owner: {
-#         ownerId: {
-#             type: String,
-#             required: true,
-#         },
-#         email: {
-#             type: String,
-#             required: true
-#         }
-#     }

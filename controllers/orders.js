@@ -9,7 +9,6 @@ const router = express.Router();
 const Order = require('../models/order');
 
 router.post('/', authToken, (req, res, next) => {
-    console.log('hit');
 	const orderData = req.body;
 	Order.create({
 		...orderData,
@@ -22,5 +21,11 @@ router.post('/', authToken, (req, res, next) => {
 		.catch(next);
 });
 
+router.get('/my-orders/:id', (req, res, next) => {
+    const userId = req.params.id
+	Order.find({"owner.ownerId": `${userId}`})
+		.then((order) => res.json(order))
+		.catch(next);
+});
 
 module.exports = router;

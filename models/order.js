@@ -4,9 +4,13 @@ const OrderSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	quantity: {
+		type: Number,
+		required: true,
+	},
 	status: {
 		type: String,
-		required: true, 
+		required: true,
 		default: 'Order Submitted',
 	},
 	deliveryEta: {
@@ -14,16 +18,16 @@ const OrderSchema = new mongoose.Schema({
 		required: true,
 		default: Date.now() + 259200000, // current date in millseconds + 3 days in milliseconds
 	},
-    owner: {
-        ownerId: {
-            type: String,
-            required: true,
-        },
-        email: {
-            type: String,
-            required: true
-        }
-    }
+	owner: {
+		ownerId: {
+			type: String,
+			required: true,
+		},
+		email: {
+			type: String,
+			required: true,
+		},
+	},
 });
 
 const Order = mongoose.model('Order', OrderSchema);
